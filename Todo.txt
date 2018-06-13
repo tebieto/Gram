@@ -1,0 +1,60 @@
+1. Responsive Design
+
+1a. Add fake banners and mobile suggestionns and mobile banners.
+
+1b. Beautify notification page
+
+1c. Add other notifications
+
+2. Add Setting And Edit Links and customise the pages
+
+3. Add D.O.B, Phone Number, cover picture, Account type, Email Verification Field to ndatabase
+
+4. Add Search and comment with Algolia
+
+5. Add icons
+
+5a.Add @nickname from home after login make user profile link /nickname
+
+
+5b. Add getting started with posting photos and videos and liking videos by fading out other components add demo posts
+
+5c. Add Profile picture Cropping with croppie
+
+5d. Edit profile pictures from homepage and profile page.
+
+6. Privacy Policies etc pages
+
+7. Upload to server
+
+8. Add email verification, Welcome Email, Password reset with mailgun
+
+9. Send notifications as Email.
+
+10. Customise Emails sent to users
+
+11. Make facebook login public in facebook dev
+
+12. Make app with android studio.
+
+13. Add chat.
+
+
+slider code
+
+for each image
+
+if image == display image say hello
+
+else
+
+say hi
+
+
+
+Use Html local storage for chat
+
+
+Optimise database queries, very very important...
+
+Remember Memecached
