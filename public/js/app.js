@@ -12237,7 +12237,7 @@ Vue.component('profile-feed', __webpack_require__(78));
 Vue.component('friends-header', __webpack_require__(83));
 Vue.component('followers-header', __webpack_require__(88));
 Vue.component('following-header', __webpack_require__(93));
-Vue.component('profile-header', __webpack_require__(194));
+Vue.component('profile-header', __webpack_require__(98));
 
 Vue.component('allnots', __webpack_require__(103));
 
@@ -55791,11 +55791,310 @@ if (false) {
 }
 
 /***/ }),
-/* 98 */,
-/* 99 */,
-/* 100 */,
-/* 101 */,
-/* 102 */,
+/* 98 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(99)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(101)
+/* template */
+var __vue_template__ = __webpack_require__(102)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\ProfileHeader.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-400fccaf", Component.options)
+  } else {
+    hotAPI.reload("data-v-400fccaf", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 99 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(100);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("6cf26f24", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-400fccaf\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ProfileHeader.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-400fccaf\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ProfileHeader.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.profile-nav{\r\n\r\nposition: absolute;\r\n\t\ttop: 15px;\r\n\t\tleft: -40px;\r\n\t\twidth:1000px;\r\n\t\tfont-weight:bold;\n}\n.profile-name {\r\nfont-weight: bold;\r\nposition: relative;\r\ntop: -40px;\r\nleft: 180px;\r\ncolor: rgb(0, 51, 102);\r\nfont-size: medium;\r\nmargin-right: 20px;\n}\n.profile-bubble:before {\r\n  content: \"\";\r\n  width: 0px;\r\n  height: 0px;\r\n  position: absolute;\r\n  border-left: 10px solid transparent;\r\n  border-right: 10px solid transparent;\r\n  border-top: 10px solid transparent;\r\n  border-bottom: 10px solid #e5e5e5;\r\n  left: 410px;\r\n  top: 15px;\n}\n.profile-nav span {\r\n\r\nmargin-left:20px;\n}\n.profile-button{\r\n\r\nposition: relative;\r\ntop: -50px;\r\nleft:32px;\n}\n.profile-button button {\r\npadding: 1px;\r\nbackground: rgb(0, 153, 0);\r\nborder:none;\n}\n.profile-button button:hover {\r\npadding: 1px;\r\nbackground: rgba(0, 153, 0,0.7);\n}\n.profile-button a {\r\ntext-decoration: none;\r\nbackground: rgb(0, 153, 0);\r\ncolor:#fff;\r\npadding: 5px;\r\nborder-radius: 5px;\n}\n.profile-button a:hover {\r\n\r\nbackground: rgba(0, 153, 0, 0.7);\n}\n.profile-feed {\r\n\tmargin-top: -50px;\r\n    width: 1200px;\n}\r\n\r\n\r\n\r\n\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 101 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+
+	props: ['avatar', 'name', 'id', 'slug'],
+
+	data: function data() {
+
+		return {
+			start: 0,
+			trigger: 0,
+			loading: false,
+			end: false,
+			friendsCount: '..',
+			followersCount: '..',
+			followingCount: '..',
+			showHeader: false
+
+		};
+	},
+	mounted: function mounted() {
+
+		this.countFriends();
+		this.countFollowers();
+		this.countFollowing();
+	},
+
+
+	methods: {
+		countFriends: function countFriends() {
+			var _this = this;
+
+			axios.get('/user/' + this.id + '/friends/').then(function (response) {
+
+				_this.friendsCount = response.data.length;
+				_this.showHeader = true;
+			});
+		},
+		countFollowers: function countFollowers() {
+			var _this2 = this;
+
+			axios.get('/user/' + this.id + '/followers/').then(function (response) {
+
+				_this2.followersCount = response.data.length;
+			});
+		},
+		countFollowing: function countFollowing() {
+			var _this3 = this;
+
+			axios.get('/user/' + this.id + '/following/').then(function (response) {
+				_this3.followingCount = response.data.length;
+			});
+		},
+		add_profile_feed: function add_profile_feed() {
+			var _this4 = this;
+
+			if (this.end == false) {
+
+				this.loading = true;
+
+				axios.get('/feed/profile/' + this.id + '/' + this.start).then(function (response) {
+					console.log(response.data);
+
+					response.data.forEach(function (feed) {
+
+						_this4.$store.commit('add_profile_feed', feed);
+					});
+
+					if (response.data === 'undefined' || response.data.length < 6) {
+						if (_this4.start >= 0) {
+
+							_this4.end = true;
+							_this4.loading = false;
+						}
+					}
+				});
+			}
+		}
+	},
+
+	computed: {
+		auth_user: function auth_user() {
+
+			var auth_user = this.$store.state.auth_user;
+			return auth_user;
+		},
+		profile_feeds: function profile_feeds() {
+
+			var profie_feeds = this.$store.state.profile_feeds;
+			return profie_feeds;
+		}
+	}
+
+});
+
+/***/ }),
+/* 102 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "col-lg-4" }, [
+    this.showHeader == true
+      ? _c(
+          "div",
+          [
+            _c("div", { staticClass: "profile-heading profile-bubble" }),
+            _vm._v(" "),
+            _c("center", [
+              _c("img", {
+                staticClass: "profile-avatar",
+                staticStyle: { "border-radius": "50%" },
+                attrs: {
+                  id: "avatar",
+                  src: this.avatar,
+                  width: "70px",
+                  height: "70px",
+                  alt: "",
+                  title: this.name
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "profile-nav" }, [
+                _c("span", [_vm._v(" Posts ")]),
+                _vm._v(" "),
+                _c("span", [
+                  _c("a", { attrs: { href: "/friends/" + this.slug } }, [
+                    _vm._v("Friends (" + _vm._s(this.friendsCount) + ")")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("span", [
+                  _c("a", { attrs: { href: "/followers/" + this.slug } }, [
+                    _vm._v("Followers (" + _vm._s(this.followersCount) + ")")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("span", [
+                  _c("a", { attrs: { href: "/following/" + this.slug } }, [
+                    _vm._v("following (" + _vm._s(this.followingCount) + ")")
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "profile-button" },
+                [
+                  this.id == _vm.auth_user.id
+                    ? _c("a", { attrs: { href: "/profile/edit/profile" } }, [
+                        _vm._v("Edit")
+                      ])
+                    : _vm._e(),
+                  this.id != _vm.auth_user.id
+                    ? _c("friend", { attrs: { profile_user_id: this.id } })
+                    : _vm._e()
+                ],
+                1
+              )
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "profile-name" }, [
+              _vm._v(_vm._s(this.name) + "'s Posts")
+            ])
+          ],
+          1
+        )
+      : _vm._e()
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-400fccaf", module.exports)
+  }
+}
+
+/***/ }),
 /* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -61830,319 +62129,6 @@ var index_esm = {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 185 */,
-/* 186 */,
-/* 187 */,
-/* 188 */,
-/* 189 */,
-/* 190 */,
-/* 191 */,
-/* 192 */,
-/* 193 */,
-/* 194 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(195)
-}
-var normalizeComponent = __webpack_require__(0)
-/* script */
-var __vue_script__ = __webpack_require__(197)
-/* template */
-var __vue_template__ = __webpack_require__(198)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources\\assets\\js\\components\\ProfileHeader.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-400fccaf", Component.options)
-  } else {
-    hotAPI.reload("data-v-400fccaf", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 195 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(196);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(2)("6cf26f24", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-400fccaf\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ProfileHeader.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-400fccaf\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ProfileHeader.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 196 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(1)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.profile-nav{\r\n\r\nposition: absolute;\r\n\t\ttop: 15px;\r\n\t\tleft: -40px;\r\n\t\twidth:1000px;\r\n\t\tfont-weight:bold;\n}\n.profile-name {\r\nfont-weight: bold;\r\nposition: relative;\r\ntop: -40px;\r\nleft: 180px;\r\ncolor: rgb(0, 51, 102);\r\nfont-size: medium;\r\nmargin-right: 20px;\n}\n.profile-bubble:before {\r\n  content: \"\";\r\n  width: 0px;\r\n  height: 0px;\r\n  position: absolute;\r\n  border-left: 10px solid transparent;\r\n  border-right: 10px solid transparent;\r\n  border-top: 10px solid transparent;\r\n  border-bottom: 10px solid #e5e5e5;\r\n  left: 410px;\r\n  top: 15px;\n}\n.profile-nav span {\r\n\r\nmargin-left:20px;\n}\n.profile-button{\r\n\r\nposition: relative;\r\ntop: -50px;\r\nleft:32px;\n}\n.profile-button button {\r\npadding: 1px;\r\nbackground: rgb(0, 153, 0);\r\nborder:none;\n}\n.profile-button button:hover {\r\npadding: 1px;\r\nbackground: rgba(0, 153, 0,0.7);\n}\n.profile-button a {\r\ntext-decoration: none;\r\nbackground: rgb(0, 153, 0);\r\ncolor:#fff;\r\npadding: 5px;\r\nborder-radius: 5px;\n}\n.profile-button a:hover {\r\n\r\nbackground: rgba(0, 153, 0, 0.7);\n}\n.profile-feed {\r\n\tmargin-top: -50px;\r\n    width: 1200px;\n}\r\n\r\n\r\n\r\n\r\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 197 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-
-	props: ['avatar', 'name', 'id', 'slug'],
-
-	data: function data() {
-
-		return {
-			start: 0,
-			trigger: 0,
-			loading: false,
-			end: false,
-			friendsCount: '..',
-			followersCount: '..',
-			followingCount: '..',
-			showHeader: false
-
-		};
-	},
-	mounted: function mounted() {
-
-		this.countFriends();
-		this.countFollowers();
-		this.countFollowing();
-	},
-
-
-	methods: {
-		countFriends: function countFriends() {
-			var _this = this;
-
-			axios.get('/user/' + this.id + '/friends/').then(function (response) {
-
-				_this.friendsCount = response.data.length;
-				_this.showHeader = true;
-			});
-		},
-		countFollowers: function countFollowers() {
-			var _this2 = this;
-
-			axios.get('/user/' + this.id + '/followers/').then(function (response) {
-
-				_this2.followersCount = response.data.length;
-			});
-		},
-		countFollowing: function countFollowing() {
-			var _this3 = this;
-
-			axios.get('/user/' + this.id + '/following/').then(function (response) {
-				_this3.followingCount = response.data.length;
-			});
-		},
-		add_profile_feed: function add_profile_feed() {
-			var _this4 = this;
-
-			if (this.end == false) {
-
-				this.loading = true;
-
-				axios.get('/feed/profile/' + this.id + '/' + this.start).then(function (response) {
-					console.log(response.data);
-
-					response.data.forEach(function (feed) {
-
-						_this4.$store.commit('add_profile_feed', feed);
-					});
-
-					if (response.data === 'undefined' || response.data.length < 6) {
-						if (_this4.start >= 0) {
-
-							_this4.end = true;
-							_this4.loading = false;
-						}
-					}
-				});
-			}
-		}
-	},
-
-	computed: {
-		auth_user: function auth_user() {
-
-			var auth_user = this.$store.state.auth_user;
-			return auth_user;
-		},
-		profile_feeds: function profile_feeds() {
-
-			var profie_feeds = this.$store.state.profile_feeds;
-			return profie_feeds;
-		}
-	}
-
-});
-
-/***/ }),
-/* 198 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-lg-4" }, [
-    this.showHeader == true
-      ? _c(
-          "div",
-          [
-            _c("div", { staticClass: "profile-heading profile-bubble" }),
-            _vm._v(" "),
-            _c("center", [
-              _c("img", {
-                staticClass: "profile-avatar",
-                staticStyle: { "border-radius": "50%" },
-                attrs: {
-                  id: "avatar",
-                  src: this.avatar,
-                  width: "70px",
-                  height: "70px",
-                  alt: "",
-                  title: this.name
-                }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "profile-nav" }, [
-                _c("span", [_vm._v(" Posts ")]),
-                _vm._v(" "),
-                _c("span", [
-                  _c("a", { attrs: { href: "/friends/" + this.slug } }, [
-                    _vm._v("Friends (" + _vm._s(this.friendsCount) + ")")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("span", [
-                  _c("a", { attrs: { href: "/followers/" + this.slug } }, [
-                    _vm._v("Followers (" + _vm._s(this.followersCount) + ")")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("span", [
-                  _c("a", { attrs: { href: "/following/" + this.slug } }, [
-                    _vm._v("following (" + _vm._s(this.followingCount) + ")")
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "profile-button" },
-                [
-                  this.id == _vm.auth_user.id
-                    ? _c("a", { attrs: { href: "/profile/edit/profile" } }, [
-                        _vm._v("Edit")
-                      ])
-                    : _vm._e(),
-                  this.id != _vm.auth_user.id
-                    ? _c("friend", { attrs: { profile_user_id: this.id } })
-                    : _vm._e()
-                ],
-                1
-              )
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "profile-name" }, [
-              _vm._v(_vm._s(this.name) + "'s Posts")
-            ])
-          ],
-          1
-        )
-      : _vm._e()
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-400fccaf", module.exports)
-  }
-}
 
 /***/ })
 /******/ ]);
